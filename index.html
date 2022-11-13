@@ -21,6 +21,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
         crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/dataTables.bootstrap4.min.css">
+    <link rel="stylesheet" href="css/custom.css">
 </head>
 
 <body>
@@ -58,7 +59,13 @@
     <script>
         function format_link(link) {
             if (link)
-                return "<a href='" + link + "' target='_blank'>" + link + "</a>";
+                return "<a href='" + link + "' target='_blank'>See on Immutable MP</a>";
+            else return "";
+        }
+
+        function format_id(id) {
+            if (id)
+                return "<p class='sr-only'>#" + id + "</p><div class='id-img' data-id='#" + id + "'><img src='https://kiraverse.mypinata.cloud/ipfs/QmaZdMnRMU85BTtB4iCidJBGzRirfBFCDqEgirXdLNATS1/imagesWith1s/" + id + ".png' alt='#" + id + "' loading='lazy' /></div>";
             else return "";
         }
 
@@ -85,9 +92,11 @@
             },
             datatables_options: {
                 paging: true,
-                pageLength: 50
+                pageLength: 10,
+                order: []
             },
             custom_formatting: [
+                [0, format_id],
                 [3, format_link]
             ]
         });
