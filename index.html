@@ -34,12 +34,8 @@
     <div class="container-fluid">
         <main class="row">
             <div class="col">
-
-
-                <br/>
                 <h4>📚 Layers and variations</h4>
                 <div id="traits-table"></div>
-
                 <hr>
                 <br/>
                 <h4>🎲 Rarity</h4>
@@ -74,7 +70,10 @@
             allow_download: false,
             csv_options: {
                 separator: ",",
-                delimiter: '"'
+                delimiter: '"',
+                dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>" +
+                "<'row'<'col-sm-12 ov-x-auto'tr>>"
             },
             datatables_options: {
                 paging: true
@@ -92,7 +91,11 @@
             datatables_options: {
                 paging: true,
                 pageLength: 10,
-                order: []
+                order: [],
+                dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>" +
+                "<'row'<'col-sm-12 ov-x-auto'tr>>" +
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"
             },
             custom_formatting: [
                 [0, format_id],
