@@ -51,7 +51,7 @@
                 <br/>
                 <h4>🎲 Rarity</h4>
                 <p class="warning bubble">The rarity will change as more mints come in!</p>
-                <p class="info bubble">Data will be updated every 30 minutes until Mint Phase 2, then faster!</p>
+                <p class="info bubble">Data will be pause until Mint Phase 2 ends</p>
                 <div id="rarity-table"></div>
             </div>
         </main>
@@ -79,7 +79,7 @@
         }
 
         CsvToHtmlTable.init({
-            csv_path: "https://kiraverse-bucket.s3.us-west-1.amazonaws.com/metadata_stats.csv",
+            csv_path: "data/metadata_stats.csv",
             element: "traits-table",
             allow_download: false,
             csv_options: {
@@ -95,7 +95,7 @@
         });
 
         CsvToHtmlTable.init({
-            csv_path: "https://kiraverse-bucket.s3.us-west-1.amazonaws.com/Ranks.csv",
+            csv_path: "data/Ranks.csv",
             element: "rarity-table",
             allow_download: false,
             csv_options: {
@@ -133,7 +133,7 @@
         };
 
         window.addEventListener("load", () => {
-            getText("https://kiraverse-bucket.s3.us-west-1.amazonaws.com/updatedAt.txt", (err, data) => {
+            getText("data/updatedAt.txt", (err, data) => {
                 if (err === null) {
                     document.getElementById("updated-at").innerText = " - Updated at " + data + " UTC";
                 }
