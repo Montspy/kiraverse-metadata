@@ -1,76 +1,37 @@
-/* Custom styles */
-/*
-DePaul IHS
-*/
-
-@font-face {
-    font-family: 'GibsonSemiBold';
-    src: url('/css/fonts/gibson-semibold-webfont.eot');
-    src: url('/css/fonts/gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/gibson-semibold-webfont.woff') format('woff'),
-         url('/css/fonts/gibson-semibold-webfont.ttf') format('truetype'),
-         url('/css/fonts/gibson-semibold-webfont.svg#GibsonSemiBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'GibsonBold';
-    src: url('/css/fonts/gibson-bold-webfont.eot');
-    src: url('/css/fonts/gibson-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/gibson-bold-webfont.woff') format('woff'),
-         url('/css/fonts/gibson-bold-webfont.ttf') format('truetype'),
-         url('/css/fonts/gibson-bold-webfont.svg#GibsonBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ColaborateThinRegular';
-    src: url('/css/fonts/ColabThi-webfont.eot');
-    src: url('/css/fonts/ColabThi-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/css/fonts/ColabThi-webfont.woff') format('woff'),
-         url('/css/fonts/ColabThi-webfont.ttf') format('truetype'),
-         url('/css/fonts/ColabThi-webfont.svg#ColaborateThinRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'ColaborateRegRegular';
-    src: url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.eot');
-    src: url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.woff') format('woff'),
-         url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.ttf') format('truetype'),
-         url('http://www.housingstudies.org/static/css/fonts/ColabReg-webfont.svg#ColaborateRegRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-@font-face {
-    font-family: 'AlegreyaBold';
-    src: url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.eot');
-    src: url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.woff') format('woff'),
-         url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.ttf') format('truetype'),
-         url('http://www.housingstudies.org/static/css/fonts/Alegreya-Bold-webfont.svg#AlegreyaBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
-
-
 body {
-  font: 0.8rem 'ColaborateThinRegular', sans-serif;
-  /* font-size: 0.8rem; */
+  font-size: 0.8rem;
+  font-family: sans-serif;
+
+  padding-inline: 2em;
 }
 
 h1 {
-  font: 3em 'GibsonBold', serif;
+  font-size: 3em;
+  text-transform: uppercase;
+  color: #c7c7c7;
+  padding: 0.25em;
+
+  background-color: #111;
+  box-shadow: 0 0 0 100vmax #111;
+  clip-path: inset(0 -100vw);
+}
+
+h2 {
+  font-size: 2em;
   text-transform: uppercase;
   color: #827E7E;
 }
 
-h2 {
-  font: 1em 'GibsonBold', serif;
-  text-transform: uppercase;
-  color: #827E7E;
+h3 {
+  font-size: 1.5em;
+}
+
+h4 {
+  padding-block: 0.25em;
+
+  background-color: #eee;
+  box-shadow: 0 0 0 100vmax #eee;
+  clip-path: inset(0 -100vw);
 }
 
 #logo {
@@ -81,7 +42,7 @@ h2 {
 
 .info {
   padding: 6px 8px;
-  font: 1em Arial, Helvetica, sans-serif;
+  font-size: 1em;
   background: white;
   background: rgba(255,255,255,0.8);
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
@@ -134,4 +95,26 @@ img {
   position: absolute;
   white-space: nowrap;
   width: 1px;
+}
+
+.warning {
+  background-color: #b40606;
+  color: rgb(255, 239, 239);
+  padding: 0.25em 1em;
+
+  font-weight: 700;
+
+  width: max-content;
+  margin-block: 1em;
+  margin-inline: auto;
+  position: relative;
+
+  border-radius: 100vw;
+}
+
+.warning::before {
+  position: relative;
+  content: "🚨";
+  padding: 0.125em;
+  right: 0.125em;
 }
