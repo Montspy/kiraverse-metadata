@@ -66,7 +66,7 @@ img {
   max-width: 100%;
 }
 
-.id-img {
+.id-img, .nft-img {
   width: 6em;
   position: relative;
 }
@@ -107,6 +107,13 @@ img {
   text-align: center;
 
   border-radius: 1em;
+
+  background-color: var(--clr-heading-bg);
+  border: 2px solid var(--clr-neutral-100);
+
+  color: var(--clr-body-text);
+
+  padding: 0.25em 1em;
 }
 
 .warning {

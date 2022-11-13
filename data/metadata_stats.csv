@@ -12,7 +12,7 @@ Background,Red,436
 Background,Kira,135
 Background,Teal,402
 Background,Purple,381
-Background,Grey,388
+Background,Grey,389
 Foundation,Wings of Herbs,62
 Foundation,Aura of Nature,110
 Foundation,None,1141
@@ -32,7 +32,7 @@ Foundation,Aura of Ocean,102
 Foundation,Blade of Ahphy,80
 Foundation,Wings of Silver,39
 Foundation,Stems of All,33
-Foundation,Aura of Taste,106
+Foundation,Aura of Taste,107
 Foundation,Aura of Love,71
 Foundation,Wings of Fire,42
 Foundation,Wings of Gold,22
@@ -57,7 +57,7 @@ Body,Ponytail Grey,63
 Body,Braids White,57
 Body,Mullet Dark Green,11
 Body,Ponytail Diamond,20
-Body,Braids Purple,54
+Body,Braids Purple,55
 Body,Racer Light Yellow,46
 Body,Pixie Cut Pink,28
 Body,Pixie Cut Silver,18
@@ -261,7 +261,7 @@ Clothing,Diamond Monk with Multi Chain,16
 Clothing,Diamond Velvet Turtleneck,19
 Clothing,Red Velvet Monk,17
 Clothing,Stealth Kira Monk with Bronze Chain,22
-Clothing,Red Kira Monk with Bronze Kira Chain,22
+Clothing,Red Kira Monk with Bronze Kira Chain,23
 Clothing,Orange Kira Monk with Silver Chain,9
 Clothing,Yellow Excellence,19
 Clothing,Silver Excellence,9
@@ -313,12 +313,12 @@ Halos,Purple Fragments,111
 Halos,Gold Longsword,52
 Halos,Silver Longsword,41
 Halos,Gold Fragments,70
-Halos,Pink Fragments,105
+Halos,Pink Fragments,106
 Halos,Gold Pins,58
 Halos,Mega Shards,48
 Halos,Diamond Fragments,54
 Halos,Diamond Pins,60
-Eyes,None,2292
+Eyes,None,2293
 Eyes,Black,103
 Eyes,Green,65
 Eyes,Brown,86
@@ -384,12 +384,13 @@ Masks,Gold Bioface,19
 Masks,Gold Ruler,30
 Masks,Blue Taker,29
 Masks,Royal Maker,22
-Masks,Lavender Ai Visor,42
+Masks,Lavender Ai Visor,43
 Masks,Orange Oracle,39
 Masks,Jade Maker,28
 Masks,Wrath Viper,38
 Masks,Orange Ruler,46
 Masks,Orange Chain Face,25
+UNREVEALED,UNREVEALED,6544
 Balds,Natural Dark,91
 Balds,Natural Light,49
 Balds,Natural,99

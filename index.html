@@ -47,12 +47,14 @@
             <div class="col">
                 <h4>📚 Layers and variations</h4>
                 <div id="traits-table"></div>
+                <p id="traits-table-loading" class="bubble">Loading...</p>
                 <hr>
                 <br/>
                 <h4>🎲 Rarity</h4>
                 <p class="warning bubble">The rarity will change as more mints come in!</p>
-                <p class="info bubble">Data will be pause until Mint Phase 2 ends</p>
+                <p class="info bubble">Data will be paused until Mint Phase 2 ends</p>
                 <div id="rarity-table"></div>
+                <p id="rarity-table-loading" class="bubble">Loading...</p>
             </div>
         </main>
     </div>
@@ -66,14 +68,22 @@
     <script>
         function format_link(link) {
             if (link)
-                return "<a href='" + link + "' target='_blank'>See on Immutable MP</a>";
+                return "<a href='" + link + "' target='_blank'>ImmutableX</a>";
+            else return "";
+        }
+
+        function format_image(img_url) {
+            if (img_url) {
+                id_index = img_url.indexOf("?__id=");
+                img_src = img_url.substring(0, id_index);
+                return "<div class='nft-img'><a href='" + img_src + "' target='_blank'><img src='" + img_src + "' alt='NFT image' loading='lazy' /></a></div>";
+            }
             else return "";
         }
 
         function format_id(id) {
             if (id) {
-                img_src = "https://kiraverse.mypinata.cloud/ipfs/QmaZdMnRMU85BTtB4iCidJBGzRirfBFCDqEgirXdLNATS1/imagesWith1s/" + id + ".png";
-                return "<p class='sr-only'>#" + id + "</p><div class='id-img' data-id='#" + id + "'><a href='" + img_src + "' target='_blank'><img src='" + img_src + "' alt='#" + id + "' loading='lazy' /></a></div>";
+                return "#" + id;
             }
             else return "";
         }
@@ -91,6 +101,9 @@
             },
             datatables_options: {
                 paging: true
+            },
+            load_callback: () => {
+                document.getElementById("traits-table-loading").remove();
             }
         });
 
@@ -108,13 +121,18 @@
                 order: [],
                 dom: "<'row'<'col-sm-12 col-md-6'l><'col-sm-12 col-md-6'f>>" +
                 "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>" +
-                "<'row'<'col-sm-12 ov-x-auto'tr>>" +
-                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>"
+                "<'row'<'col-sm-12'tr>>" +
+                "<'row'<'col-sm-12 col-md-5'i><'col-sm-12 col-md-7'p>>",
+                scrollX: true
             },
             custom_formatting: [
-                [0, format_id],
-                [3, format_link]
-            ]
+                [0, format_image],
+                [1, format_id],
+                [4, format_link]
+            ],
+            load_callback: () => {
+                document.getElementById("rarity-table-loading").remove();
+            }
         });
 
         var getText = function(url, callback) {
