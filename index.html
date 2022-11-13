@@ -59,8 +59,10 @@
         }
 
         function format_id(id) {
-            if (id)
-                return "<p class='sr-only'>#" + id + "</p><div class='id-img' data-id='#" + id + "'><img src='https://kiraverse.mypinata.cloud/ipfs/QmaZdMnRMU85BTtB4iCidJBGzRirfBFCDqEgirXdLNATS1/imagesWith1s/" + id + ".png' alt='#" + id + "' loading='lazy' /></div>";
+            if (id) {
+                img_src = "https://kiraverse.mypinata.cloud/ipfs/QmaZdMnRMU85BTtB4iCidJBGzRirfBFCDqEgirXdLNATS1/imagesWith1s/" + id + ".png";
+                return "<p class='sr-only'>#" + id + "</p><div class='id-img' data-id='#" + id + "'><a href='" + img_src + "' target='_blank'><img src='" + img_src + "' alt='#" + id + "' loading='lazy' /></a></div>";
+            }
             else return "";
         }
 
