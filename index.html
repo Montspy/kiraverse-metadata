@@ -66,9 +66,20 @@
     <script src="js/csv_to_html_table.js"></script>
     <script src="js/theme.js"></script>
     <script>
-        function format_link(link) {
-            if (link)
-                return "<a href='" + link + "' target='_blank'>ImmutableX</a>";
+        function format_link(urls) {
+            mp_urls = [{name: "GameStop", url:"nft.gamestop.com"}, {name: "ImmutableX", url: "market.immutable.com"}];
+
+            if (urls) {
+                urls = urls.split(";");
+                let anchors = [];
+                for (const url of urls) {
+                    let mp = mp_urls.find((x) => { return url.includes(x.url) })  // Find the MP name
+                    if (mp === undefined)
+                        mp = {name: "Link"};
+                    anchors.push("<a href='" + url + "' target='_blank'>" + mp.name + "</a>");
+                }
+                return anchors.join("\n<br />\n");
+            }
             else return "";
         }
 
