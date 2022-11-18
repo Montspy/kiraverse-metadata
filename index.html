@@ -52,7 +52,7 @@
                 <br/>
                 <h4>🎲 Rarity</h4>
                 <p class="warning bubble">The rarity will change as more mints come in!</p>
-                <p class="info bubble">Data will be paused until reveal (end of Mint Phase 3)</p>
+                <p class="info bubble">This rarity ranking is based on the sum of each NFT's trait rarity score. An individual trait's rarity score is (total_nft_count / nft_with_trait_count)</p>
                 <div id="rarity-table"></div>
                 <p id="rarity-table-loading" class="bubble">Loading...</p>
             </div>
@@ -100,7 +100,7 @@
         }
 
         CsvToHtmlTable.init({
-            csv_path: "data/metadata_stats.csv",
+            csv_path: "https://kiraverse-bucket.s3.us-west-1.amazonaws.com/metadata_stats.csv",
             element: "traits-table",
             allow_download: false,
             csv_options: {
@@ -119,7 +119,7 @@
         });
 
         CsvToHtmlTable.init({
-            csv_path: "data/Ranks.csv",
+            csv_path: "https://kiraverse-bucket.s3.us-west-1.amazonaws.com/Ranks.csv",
             element: "rarity-table",
             allow_download: false,
             csv_options: {
@@ -162,7 +162,7 @@
         };
 
         window.addEventListener("load", () => {
-            getText("data/updatedAt.txt", (err, data) => {
+            getText("https://kiraverse-bucket.s3.us-west-1.amazonaws.com/updatedAt.txt", (err, data) => {
                 if (err === null) {
                     document.getElementById("updated-at").innerText = " - Updated at " + data + " UTC";
                 }
