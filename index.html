@@ -13,9 +13,7 @@
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Kira Genesis metadata and rarity</title>
-    <meta name="author" content="Derek Eder">
-    <meta content="Display any CSV file as a searchable, filterable, pretty HTML table">
+    <title>Kira Genesis metadata and (unofficial) rarity</title>
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
@@ -27,7 +25,7 @@
 <body>
     <header class="row">
         <div class="col-10">
-            <h1>Kira Genesis metadata and rarity</h1>
+            <h1>Kira Genesis metadata and <span class="smaller-text">unofficial</span> rarity</h1>
         </div>
         <div class="col-2">
             <form action="" class="theme-picker">
@@ -51,6 +49,7 @@
                 <hr>
                 <br/>
                 <h4>🎲 Rarity</h4>
+                <p class="info bubble">Unofficial rarity ranking</p>
                 <p class="info bubble">This rarity ranking is based on the sum of each NFT's trait rarity score. An individual trait's rarity score is (total_nft_count / nft_with_trait_count)</p>
                 <div id="rarity-table"></div>
                 <p id="rarity-table-loading" class="bubble">Loading...</p>

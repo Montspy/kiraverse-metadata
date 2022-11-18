@@ -49,6 +49,9 @@ h1 {
 h3 {
   font-size: 1.5em;
 }
+.smaller-text {
+  font-size: 0.5em;
+}
 
 h4 {
   padding-block: 0.25em;
